@@ -12,7 +12,7 @@ const Menu = ({ addToCart, cart }) => {
   }, []);
 
   const fetchMenu = async () => {
-    const response = await axios.get("http://192.168.1.8:5173/menu");
+    const response = await axios.get("http://localhost:5173/menu");
     setMenuItems(response.data);
   };
 

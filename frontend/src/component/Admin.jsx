@@ -13,7 +13,7 @@ const Admin = () => {
   }, []);
 
   const fetchMenu = async () => {
-    const response = await axios.get("http://192.168.1.8:5173/menu");
+    const response = await axios.get("http://localhost:5173/menu");
     setMenuItems(response.data);
   };
 
@@ -73,7 +73,7 @@ const Admin = () => {
       <h2 className="text-2xl font-bold mt-6 mb-4">QR Code</h2>
       <div className="flex justify-center">
         <QRCodeCanvas
-          value="http://192.168.1.8:5173/menu" // Directly use the menu URL
+          value="http://localhost:5173/menu" // Directly use the menu URL
           size={500} // Increase the size of the QR code
           className="p-4 bg-white rounded shadow"
         />
